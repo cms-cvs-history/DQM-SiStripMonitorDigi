@@ -1,0 +1,34 @@
+       # SiStripMonitorDigi
+       module SiStripMonitorDigi = SiStripMonitorDigi
+       {
+       # add digi producers same way as Domenico in SiStripClusterizer
+         VPSet DigiProducersList = {
+            { string DigiProducer = "stripdigi"
+                                       string DigiLabel    = "\0"
+            }
+#            ,
+#            { string DigiProducer = "RawToDigi"
+#                                       string DigiLabel    = "ZeroSuppressed"
+#            }
+#            ,
+#            { string DigiProducer = "theSiStripZeroSuppression"
+#                                       string DigiLabel    = "fromVirginRaw"
+#            }
+#            ,
+#            { string DigiProducer = "theSiStripZeroSuppression"
+#                                       string DigiLabel    = "fromProcessedRaw"
+#            }
+#            ,
+#            { string DigiProducer = "theSiStripZeroSuppression"
+#                                       string DigiLabel    = "fromScopeMode"
+#            }
+         }
+         # rest of parameters
+         bool ShowMechanicalStructureView = true
+         bool ShowReadoutView = false
+         bool ShowControlView = false
+         # usually do not output histos in digis monitoring but after running the monitor for the clusters
+         bool OutputMEsInRootFile = false
+         string OutputFileName="test_digi.root"
+       }
+
