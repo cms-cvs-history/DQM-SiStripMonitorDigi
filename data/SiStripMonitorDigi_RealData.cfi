@@ -28,7 +28,8 @@
          bool ShowMechanicalStructureView = true
          bool ShowReadoutView = false
          bool ShowControlView = false
-         # usually do not output histos in digis monitoring but after running the monitor for the clusters
+         # by default do not write out any file with histograms
+         # can overwrite this in .cfg file with: replace SiStripMonitorDigi.OutputMEsInRootFile = true
          bool OutputMEsInRootFile = false
          string OutputFileName="test_digi.root"
        }
