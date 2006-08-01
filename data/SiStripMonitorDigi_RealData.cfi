@@ -7,7 +7,7 @@
 #                                       string DigiLabel    = "\0"
 #            }
 #            ,
-            { string DigiProducer = "RawToDigi"
+            { string DigiProducer = "siStripDigis"
                                        string DigiLabel    = "ZeroSuppressed"
             }
             ,
