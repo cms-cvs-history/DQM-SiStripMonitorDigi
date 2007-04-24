@@ -2,9 +2,6 @@
        {
        # add digi producers same way as Domenico in SiStripClusterizer
          VPSet DigiProducersList = {
-             #                { string DigiProducer = "stripdigi"
-             #                  string DigiLabel    = "\0"
-             #                },
              { string DigiProducer = "SiStripDigis"
                  string DigiLabel    = "ZeroSuppressed"
              },

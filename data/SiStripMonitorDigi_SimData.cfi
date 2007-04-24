@@ -6,22 +6,6 @@
             { string DigiProducer = "siStripDigis"
                                        string DigiLabel    = "\0"
             }
-#            ,
-#            { string DigiProducer = "RawToDigi"
-#                                       string DigiLabel    = "ZeroSuppressed"
-#            }
-#            ,
-#            { string DigiProducer = "theSiStripZeroSuppression"
-#                                       string DigiLabel    = "fromVirginRaw"
-#            }
-#            ,
-#            { string DigiProducer = "theSiStripZeroSuppression"
-#                                       string DigiLabel    = "fromProcessedRaw"
-#            }
-#            ,
-#            { string DigiProducer = "theSiStripZeroSuppression"
-#                                       string DigiLabel    = "fromScopeMode"
-#            }
          }
          # rest of parameters
          bool SelectAllDetectors = false
