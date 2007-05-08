@@ -12,6 +12,7 @@
          bool ShowMechanicalStructureView = true
          bool ShowReadoutView = false
          bool ShowControlView = false
+         bool ResetMEsEachRun = false
          # by default do not write out any file with histograms
          # can overwrite this in .cfg file with: replace SiStripMonitorDigi.OutputMEsInRootFile = true
          bool OutputMEsInRootFile = false
