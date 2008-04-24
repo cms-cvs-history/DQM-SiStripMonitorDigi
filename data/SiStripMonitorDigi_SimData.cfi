@@ -3,7 +3,7 @@ module SiStripMonitorDigi = SiStripMonitorDigi
 {
     # add digi producers same way as Domenico in SiStripClusterizer
     VPSet DigiProducersList = {
-        { string DigiProducer = "siStripDigis"
+        { string DigiProducer = "simSiStripDigis"
             string DigiLabel    = "ZeroSuppressed"
         },
         { string DigiProducer = "siStripZeroSuppression"
