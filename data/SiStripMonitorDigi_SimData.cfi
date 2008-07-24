@@ -1,8 +1,6 @@
 # SiStripMonitorDigi
-module SiStripMonitorDigi = SiStripMonitorDigi
-{
-    # add digi producers same way as Domenico in SiStripClusterizer
-    VPSet DigiProducersList = {
+include "DQM/SiStripMonitorDigi/data/SiStripMonitorDigi.cfi"
+replace SiStripMonitorDigi.DigiProducersList = {
         { string DigiProducer = "simSiStripDigis"
             string DigiLabel    = "ZeroSuppressed"
         },
@@ -15,19 +13,7 @@ module SiStripMonitorDigi = SiStripMonitorDigi
         { string DigiProducer = "siStripZeroSuppression"
             string DigiLabel    = "ScopeMode"
         }
+        { 
     }
-    
-    
-    # rest of parameters
-    bool SelectAllDetectors = false
-    bool ShowMechanicalStructureView = true
-    bool ShowReadoutView = false
-    bool ShowControlView = false
-    bool CalculateStripOccupancy = false
-    bool ResetMEsEachRun = false
-    # by default do not write out any file with histograms
-    # can overwrite this in .cfg file with: replace SiStripMonitorDigi.OutputMEsInRootFile = true
-    bool OutputMEsInRootFile = false
-    string OutputFileName="test_digi.root"
-}
+
 

@@ -1,1 +1,50 @@
-include "DQM/SiStripMonitorDigi/data/SiStripMonitorDigi_RealData.cfi"
+# SiStripMonitorDigi
+module SiStripMonitorDigi = SiStripMonitorDigi
+{
+    # add digi producers same way as Domenico in SiStripClusterizer
+    VPSet DigiProducersList = {
+        { string DigiProducer = "siStripDigis"
+            string DigiLabel    = "ZeroSuppressed"
+        },
+        { string DigiProducer = "siStripZeroSuppression"
+            string DigiLabel    = "VirginRaw"
+        },
+        { string DigiProducer = "siStripZeroSuppression"
+            string DigiLabel    = "ProcessedRaw"
+        },
+        { string DigiProducer = "siStripZeroSuppression"
+            string DigiLabel    = "ScopeMode"
+        }
+    }
+    
+    PSet TH1NumberOfDigis = { int32 Nbinx =  50  double xmin = -0.5 double xmax =  499.5 bool layerswitchon = true bool moduleswitchon = true}       
+    PSet TH1ADCsHottestStrip = { int32 Nbinx =  60  double xmin = -0.5 double xmax =  299.5 bool layerswitchon = false bool moduleswitchon = true}       
+    PSet TH1ADCsCoolestStrip = { int32 Nbinx =  60  double xmin = -0.5 double xmax =  299.5 bool layerswitchon = false bool moduleswitchon = true}       
+    PSet TH1DigiADCs = { int32 Nbinx =  100  double xmin = -0.5 double xmax =  499.5 bool layerswitchon = true bool moduleswitchon = true}       
+    PSet TH1StripOccupancy = { int32 Nbinx =  100  double xmin = -0.5 double xmax =  499.5 }       
+
+    bool CreateTrendMEs = false
+    PSet Trending = { int32 Nbins =  10  double xmin =  0.  double xmax = 10. double ymin = 0. double ymax = 10000. int32 Steps = 10 int32 UpdateMode = 1 }
+
+
+    ##select detectors
+    PSet detectorson = {
+	bool tibon = true
+	bool tidon = true
+	bool tobon = true
+	bool tecon = true 
+    }
+    
+    # rest of parameters
+    bool SelectAllDetectors = false
+    bool ShowMechanicalStructureView = true
+    bool ShowReadoutView = false
+    bool ShowControlView = false
+    bool CalculateStripOccupancy = false
+    bool ResetMEsEachRun = false
+    # by default do not write out any file with histograms
+    # can overwrite this in .cfg file with: replace SiStripMonitorDigi.OutputMEsInRootFile = true
+    bool OutputMEsInRootFile = false
+    string OutputFileName="/tmp/charaf/test_digi_sim.root"
+}
+
