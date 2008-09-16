@@ -21,7 +21,9 @@ module SiStripMonitorDigi = SiStripMonitorDigi
     PSet TH1ADCsHottestStrip = { int32 Nbinx =  60  double xmin = -0.5 double xmax =  299.5 bool layerswitchon = false bool moduleswitchon = true}       
     PSet TH1ADCsCoolestStrip = { int32 Nbinx =  60  double xmin = -0.5 double xmax =  299.5 bool layerswitchon = false bool moduleswitchon = true}       
     PSet TH1DigiADCs = { int32 Nbinx =  100  double xmin = -0.5 double xmax =  499.5 bool layerswitchon = true bool moduleswitchon = true}       
-    PSet TH1StripOccupancy = { int32 Nbinx =  100  double xmin = -0.5 double xmax =  499.5 }       
+    PSet TH1StripOccupancy = { int32 Nbinx =  100  double xmin = 0.0 double xmax =  1.0 bool layerswitchon = true bool moduleswitchon = true}       
+    PSet TProfNumberOfDigi = { int32 Nbinx =  100  double xmin = -0.5 double xmax =  499.5 bool layerswitchon = true bool moduleswitchon = false}       
+    PSet TProfDigiADC = { int32 Nbinx =  100  double xmin = -0.5 double xmax =  499.5 bool layerswitchon = true bool moduleswitchon = false}       
 
     bool CreateTrendMEs = false
     PSet Trending = { int32 Nbins =  10  double xmin =  0.  double xmax = 10. double ymin = 0. double ymax = 10000. int32 Steps = 10 int32 UpdateMode = 1 }
@@ -40,7 +42,6 @@ module SiStripMonitorDigi = SiStripMonitorDigi
     bool ShowMechanicalStructureView = true
     bool ShowReadoutView = false
     bool ShowControlView = false
-    bool CalculateStripOccupancy = false
     bool ResetMEsEachRun = false
     # by default do not write out any file with histograms
     # can overwrite this in .cfg file with: replace SiStripMonitorDigi.OutputMEsInRootFile = true
